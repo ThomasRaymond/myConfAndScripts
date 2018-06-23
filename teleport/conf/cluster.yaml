@@ -1,0 +1,18 @@
+# cluster.yaml
+kind: trusted_cluster
+version: v2
+metadata:
+  # the trusted cluster name MUST match the 'cluster_name' setting of the
+  # cluster
+  name: toservername
+spec:
+  # this field allows to create tunnels that are disabled, but can be enabled later.
+  enabled: true
+  # the token expected by the "main" cluster:
+  token: token1
+  # the address in 'host:port' form of the reverse tunnel listening port on the
+  # "master" proxy server:
+  tunnel_addr: remoteip:3024
+  # the address in 'host:port' form of the web listening port on the
+  # "master" proxy server:
+  web_proxy_addr: remoteip:3080
