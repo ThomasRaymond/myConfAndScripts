@@ -1,4 +1,4 @@
-source ~/.antigen.zsh
+source "$HOME"/.antigen.zsh
 
 # 加载oh-my-zsh库
 antigen use oh-my-zsh
