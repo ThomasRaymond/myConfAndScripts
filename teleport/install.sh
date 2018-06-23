@@ -6,8 +6,9 @@ tar -xvf teleport-v2.4.7-linux-amd64-bin.tar.gz
 
 BINDIR=/usr/local/bin
 VARDIR=/var/lib/teleport
-cd $(dirname $0)
-mkdir -p $VARDIR $BINDIR
+systemdDIR=/usr/lib/systemd/system/
+cd teleport
+mkdir -p $VARDIR $BINDIR $systemdDIR
 cp -f teleport tctl tsh $BINDIR/
 rm teleport-v2.4.7-linux-amd64-bin.tar.gz
 
