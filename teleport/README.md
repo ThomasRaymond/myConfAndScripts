@@ -5,16 +5,16 @@ if node is  a server in common network
     # change the conf/teleport_outerMatser.yaml in:  serverip,token1,token2,clustername   
     mv conf/teleport_outerMatser.yaml /etc/teleport/teleport.yaml   
     mv conf/teleport.service /usr/lib/systemd/system/   
-    systemed enable teleport&&systemed start teleport   
+    systemctl enable teleport&&systemctl start teleport   
  ````
  else if node is a server in private network
  ````
-    # change the conf/teleport_innerMaster.yaml in:serverip,token1,token2,clustername   
+    # change the conf/teleport_innerMaster.yaml in:serverip,token1,clustername   
     mv conf/teleport_innerMaster.yaml /etc/teleport/teleport.yaml  
     mv conf/teleport.service /usr/lib/systemd/system/   
-    systemed enable teleport&&systemed start teleport   
+    systemctl enable teleport&&systemctl start teleport   
  ````
-if if node is a server in private network and it need be connected with remoteserver 
+if node is a server in private network and it need be connected with remoteserver 
  ```` 
     # change the conf/cluster.yaml in:toservername,token1,remoteip   
     mv conf/cluster.yaml /etc/teleport/cluster.yaml  

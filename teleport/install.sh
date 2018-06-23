@@ -5,11 +5,12 @@ wget https://github.com/gravitational/teleport/releases/download/v2.4.7/teleport
 tar -xvf teleport-v2.4.7-linux-amd64-bin.tar.gz
 
 BINDIR=/usr/local/bin
+etcDIR=/etc/teleport
 VARDIR=/var/lib/teleport
 systemdDIR=/usr/lib/systemd/system/
 cd teleport
-mkdir -p $VARDIR $BINDIR $systemdDIR
+mkdir -p $VARDIR $BINDIR $systemdDIR $etcDIR
 cp -f teleport tctl tsh $BINDIR/
-rm teleport-v2.4.7-linux-amd64-bin.tar.gz
+cd .. && rm teleport-v2.4.7-linux-amd64-bin.tar.gz
 
 #
