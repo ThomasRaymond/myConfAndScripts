@@ -1,0 +1,2 @@
+## setup
+mv .tmux.conf ~/
